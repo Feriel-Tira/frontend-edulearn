@@ -1,27 +1,27 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import DashboardEtudiant from './pages/DashboardEtudiant';
-import MesCours from './pages/MesCours';
-import Quiz from './pages/Quiz';
-import Progression from './pages/Progression';
-import Profil from './pages/Profil';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Login from "./pages/login";
+import Register from "./pages/register";
+import Home from "./pages/home";
+import Footer from "./pages/footer";
 import './App.css';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (
     <Router>
       <div className="App">
         <Routes>
-          <Route path="/" element={<DashboardEtudiant />} />
-          <Route path="/dashboard" element={<DashboardEtudiant />} />
-          <Route path="/cours" element={<MesCours />} />
-          <Route path="/quiz" element={<Quiz />} />
-          <Route path="/progression" element={<Progression />} />
-          <Route path="/profil" element={<Profil />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
+        <Footer />
       </div>
     </Router>
   );
+  
 }
 
 export default App;
