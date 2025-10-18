@@ -20,7 +20,7 @@ body {
 .top-nav {
   background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
   color: white;
-  padding: 1rem 2rem;
+  padding: 0.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -30,13 +30,10 @@ body {
   left: 0;
   right: 0;
   z-index: 1000;
+  height: 70px; /* Hauteur fixe */
 }
 
-.logo {
-  font-size: 1.8rem;
-  font-weight: bold;
-  color: white;
-}
+
 
 .nav-menu {
   display: flex;
@@ -350,7 +347,7 @@ body {
   background: #2563eb;
 }
 
-/* Right Sidebar - Statistics */
+/* Right Sidebar */
 .right-sidebar {
   width: 300px;
   background: white;
@@ -1661,4 +1658,18 @@ body {
 
 .settings-link:hover {
   background: #f0f9ff;
+}
+
+
+/* Logo Styles */
+.logo {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.logo-image {
+  height: 50px; /* Taille parfaite pour 70px de navbar */
+  width: auto;
+  object-fit: contain;
 }

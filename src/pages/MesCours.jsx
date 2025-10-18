@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../images/logo.png';
 import '../App.css';
 
 const MesCours = () => {
@@ -135,7 +136,9 @@ const MesCours = () => {
     <div className="app-container">
       {/* Top Navigation Bar */}
       <nav className="top-nav">
-        <div className="logo">EDULEARN</div>
+        <div className="logo">
+  <img src={logo} alt="EduLearn" className="logo-image" />
+</div>
         <ul className="nav-menu">
           <li><Link to="/cours" className={location.pathname === '/cours' ? 'nav-active' : ''}>Cours</Link></li>
           <li><Link to="/quiz" className={location.pathname === '/quiz' ? 'nav-active' : ''}>Quiz</Link></li>
@@ -213,32 +216,22 @@ const MesCours = () => {
         {/* Main Content */}
         <main className="main-content">
           {/* Header Section */}
-          <section className="courses-header">
-            <div className="header-content">
-              <h1 className="page-title">Mes Cours</h1>
-              <p className="page-subtitle">
-                Retrouvez tous vos cours, suivez votre progression et découvrez de nouveaux contenus.
+            <section className="welcome-section">
+            <h1 className="welcome-title">Mes cours</h1>
+            <p className="welcome-subtitle">
+             Retrouvez tous vos cours, suivez votre progression et découvrez de nouveaux contenus.
               </p>
-            </div>
-            
-            <div className="header-actions">
-              <div className="search-bar">
-                <input
-                  type="text"
-                  className="search-input"
-                  placeholder="Rechercher un cours..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                />
-                <button className="search-button">🔍</button>
-              </div>
-              <button className="filter-button">
-                <span>🎛️</span>
-                Filtres
-              </button>
+            <div className="search-bar">
+              <input
+                type="text"
+                className="search-input"
+                placeholder="Rechercher un cours, un sujet..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              <button className="search-button">🔍 Rechercher</button>
             </div>
           </section>
-
           {/* Categories Filter */}
           <section className="categories-section">
             <div className="categories-list">

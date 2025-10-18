@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import logo from '../images/logo.png';
+import '../App.css';
 
 const Quiz = () => {
   const location = useLocation();
@@ -7,7 +9,9 @@ const Quiz = () => {
   return (
     <div className="app-container">
       <nav className="top-nav">
-        <div className="logo">EDULEARN</div>
+        <div className="logo">
+  <img src={logo} alt="EduLearn" className="logo-image" />
+</div>
         <ul className="nav-menu">
           <li><Link to="/cours" className={location.pathname === '/cours' ? 'nav-active' : ''}>Cours</Link></li>
           <li><Link to="/quiz" className={location.pathname === '/quiz' ? 'nav-active' : ''}>Quiz</Link></li>
